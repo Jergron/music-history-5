@@ -1,0 +1,23 @@
+{
+  "songs": [ {
+    "title": "Another Brick in the Wall",
+    "artist": "Pink Floyd",
+    "album": "The Wall"
+    },
+    {
+      "title": "Welcome To The Jungle",
+      "artist": "Guns & Roses",
+      "album": "Appetite for Destruction"
+    },
+    {
+      "title": "Ironic",
+      "artist": "Alanis Morisette",
+      "album": "Jagged Little Pill"
+    },
+    {
+      "title": "Ice Princess",
+      "artist": "Azealia Banks",
+      "album": "Broke With Expensive Taste"
+    }    
+  ]
+}

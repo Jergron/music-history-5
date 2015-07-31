@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <title>Nashville Software School</title>
+</head>
+
+<body>
+<div id="page">
+    <div class="top">
+  	  <header>
+  	  <div>
+      <nav>
+        <ul>
+          <li>
+            View Music
+          </li>
+          <li id="liline">|</li>
+          <li>
+            <a href="#">Add Music</a>
+          </li>
+          <li id="liline">|</li>
+          <li>
+            <a href="#">Profile</a>
+          </li>
+        </ul>
+      </nav>
+      </div>
+  	  </header>
+    </div>
+
+  <div id="box">
+    <div class="sidebar">
+      <section>
+        <legend for=fader id="slide" class="space">Song Length:</legend>
+        <div id="drop">
+          <input type=range min=0 max=5 value=3 id="fader">
+        </div>
+      </section>
+      <div id="drop">
+	  <section>
+	    <label id="artist">
+	      <p>Artist:</p>
+	    </label>
+	    <select id="options">
+	      <option value="options">Options</option>
+	    </select>
+	    <label id="album">
+	      <p>Album:</p>
+	    </label>
+	    <select id="options">
+	      <option value="options">Options</option>
+	    </select>
+	  </section>
+      </div>
+      <legend id="drop">
+        <p>Genre:</p>
+      </legend>
+      <div class="check">
+        <form action="demo_form.asp">
+          <legend>
+            <input type="checkbox" name="music" value="rock">Rock
+          </legend>
+          <legend>
+            <input type="checkbox" name="music" value="pop">Pop
+          </legend>
+          <legend>
+            <input type="checkbox" name="music" value="blues">Blues
+          </legend>
+        </form>
+      </div>
+      <div class="list">
+        <form action="demo_form.asp">
+          <legend>
+            <input type="checkbox" name="music" value="classical">Classical
+          </legend>
+          <legend>
+            <input type="checkbox" name="music" value="jazz">Jazz
+          </legend>
+          <legend>
+            <input type="checkbox" name="music" value="hip hop">Hip Hop
+          </legend>
+        </form>
+      </div>
+      <div id="button">
+        <input type="submit" value="Filter">
+      </div>
+    </div>
+    <div id="main">
+      <section>
+        <div id="main2" class="java-styling">
+        </div>
+      </section>
+    </div>	
+  </div>  
+</div>
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script data-main="javascripts/main" src="./bower_components/requirejs/require.js"></script>
+</body>

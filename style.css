@@ -1,0 +1,217 @@
+/******************
+GENERAL
+*******************/
+
+body {
+  line-height: 1;
+}
+
+article {
+  border: 2px solid black;
+}
+
+#page {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /*border: 1px dashed black;*/
+  flex-direction: column;
+
+
+}
+
+#box {
+  /*border: 2px dotted red;*/
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  color: #785616;
+  margin-bottom: 0px;
+}
+
+
+/******************
+HEADER
+*******************/
+
+.top {
+  border: 2px solid black;
+  background-color: #FFB4B0;
+  /*max-width: 798px;*/
+  height: 46px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  display: flex;
+}
+
+.top li {
+  display: inline;
+}
+
+.top ul {
+  margin-left: -1.5em;
+  margin-top: 15px;
+}
+
+.top a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+#liline {
+  font-weight: bold;
+}
+/******************
+SIDEBAR
+*******************/
+
+
+.sidebar {
+  background-color: #4DD7FA;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  border: 2px solid black;
+  margin-right: 1em;
+  flex: 1;
+  min-width: 200px;
+  /*margin-bottom: 1em;*/
+}
+
+
+#drop {
+  padding-left: 10px;
+}
+
+#options {
+  max-width: 75%;
+  border: 2px solid black;
+}
+
+
+#artist p {
+  max-width: 37px;
+  height: 14px;
+}
+
+#album p {
+  max-width: 45px;
+  height: 18px;
+}
+
+.check {
+  display: inline-block;
+  float: left;
+  clear: both;
+  padding: 5px;
+  line-height: 1.625em;
+}
+
+.check label {
+  padding: 3px;
+  font-size: 14px;#
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.list {
+  padding: 5px;
+  line-height: 1.625em;
+}
+
+.list label {
+  padding: 3px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#button {
+  display: inline-block;
+  text-align: center;
+  padding: 2em;
+  margin-top: -1em;
+}
+
+#button input {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 0 2.5em 2.5px 2.5em;
+  font-size: 16px;
+  background-color: #F1F1F1;
+}
+
+.space {
+  padding: 15px 10px;
+}
+/******************
+MAIN
+*******************/
+#main {
+/*  border: 2px solid green;*/
+  flex-grow: 2;
+  border: 2px solid black;
+  background-color: #FEFAC0;
+  
+}
+#main section {
+  /*height: 372px;*/
+  overflow: scroll;
+}
+
+.java-styling div:first-child {
+  font-weight: bolder;
+}
+
+.java-styling:nth-of-type(2n+0) {
+  background-color: #FFF5EE;
+}
+
+.java-styling:nth-of-type(2n+1) {
+  background-color: #F5FFFA;
+}
+
+
+#song {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  color: #785616;
+  margin-bottom: 0px;
+}
+
+#select {
+  max-width: 72px;
+  height: 18px;
+}
+
+#main ul {
+  margin-left: -3em;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#artist {
+  vertical-align: middle;
+  height: 18px;
+}
+
+#line {
+  padding: 0 10px 0 10px;
+  max-width: 4px;
+  height: 18px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#album {
+  vertical-align: middle;
+  height: 18px;
+}
+
+#genre {
+  vertical-align: middle;
+  height: 18px;
+}
