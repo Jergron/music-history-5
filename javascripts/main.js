@@ -4,7 +4,7 @@ requirejs(["dom-access", "populate-songs", "get-more-songs"], function(dom, popu
   var songs = populate.setSongs();
   console.log(songs);
   for (i = 0; i < songs.length; i++) {
-    var albumInfo = "<div class='java-styling'>"; 
+    var albumInfo = "<div class='js-styling'>"; 
     albumInfo += "<h2>" + songs[i].title + "</h2>"; 
     albumInfo += songs[i].artist; 
     albumInfo += " | "; 
@@ -21,7 +21,7 @@ requirejs(["dom-access", "populate-songs", "get-more-songs"], function(dom, popu
     get.querySongs();
     var songs2 = get.setSongs();
     for (i = 0; i < songs2.length; i++) {
-      var albumInfo = "<div class='java-styling'>"; 
+      var albumInfo = "<div class='js-styling'>"; 
       albumInfo += "<h2>" + songs2[i].title + "</h2>"; 
       albumInfo += songs2[i].artist; 
       albumInfo += " | "; 

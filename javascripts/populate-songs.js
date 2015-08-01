@@ -1,14 +1,14 @@
-define(function myData(a, b) {
+define(function () {
   var songs = [];
 
   return {
     querySongs: function (){
         $.ajax({
           url:"/data/list.json",
-          // async: false
+          async: false
         }).done(function(data) {
           songs = data.songs;
-          myData.call(this, songs);
+          // myData.call(this, songs);
       });
     },
     setSongs: function () {

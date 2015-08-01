@@ -162,15 +162,15 @@ MAIN
   overflow: scroll;
 }
 
-.java-styling div:first-child {
+.js-styling div:first-child {
   font-weight: bolder;
 }
 
-.java-styling:nth-of-type(2n+0) {
+.js-styling:nth-of-type(2n+0) {
   background-color: #FFF5EE;
 }
 
-.java-styling:nth-of-type(2n+1) {
+.js-styling:nth-of-type(2n+1) {
   background-color: #F5FFFA;
 }
 
