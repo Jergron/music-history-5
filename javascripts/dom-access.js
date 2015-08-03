@@ -1,4 +1,4 @@
 define(function() {
-  var $outputMain = $("#main2");
+  var $outputMain = $("#mainButton");
   return $outputMain;
 }); 
