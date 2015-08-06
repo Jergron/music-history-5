@@ -1,0 +1,39 @@
+body {
+  font: 100% "Lucida Calligraphy", Helvetica, sans-serif;
+  color: #333;
+  background-image: url("http://self-inspiration.com/bundles/selfinspiration/article_pictures/71.jpg");
+  min-height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center; }
+  body li {
+    list-style: none outside none; }
+
+.content {
+  overflow: hidden; }
+
+#sidebar {
+  background-color: rgba(0, 0, 0, 0.4); }
+  #sidebar p {
+    color: teal; }
+
+#filter {
+  border: 2px solid black;
+  font-family: Arial;
+  font-size: 18px; }
+
+#navbar {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 2px solid black; }
+
+#main {
+  background-color: rgba(0, 0, 0, 0.4); }
+  #main p {
+    color: teal; }
+  #main #songTitle {
+    color: brown;
+    opacity: 0.6;
+    line-height: 50%; }
+
+/*# sourceMappingURL=style.css.map */

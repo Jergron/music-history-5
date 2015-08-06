@@ -1,10 +1,10 @@
-define(function () {
+define(["jquery"],function($) {
   return {
     querySongs: function (callback){
       $.ajax({
         url:"/data/list.json"
       }).done(function (data) {
-        callback.call(this, data.songs);
+        callback.call(this, data);
       });
     }
   };

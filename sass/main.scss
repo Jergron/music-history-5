@@ -1,0 +1,55 @@
+$font-stack: "Lucida Calligraphy", Helvetica, sans-serif;
+$primary-color: #333;
+$border-columns: 2px solid black;
+$background: rgba(0, 0, 0, 0.4);
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-image: url("http://self-inspiration.com/bundles/selfinspiration/article_pictures/71.jpg");
+  min-height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  li {
+      list-style: none outside none;
+  } 
+}
+
+.content {
+  overflow: hidden;
+}
+
+#sidebar {
+  background-color: $background;
+   p{
+    color: teal;
+  }
+}
+
+
+
+#filter {
+  border: $border-columns;
+  font-family: Arial;
+  font-size: 18px;
+}
+
+#navbar {
+  background-color: $background;
+  border: $border-columns;
+}
+
+#main {
+  background-color: $background;
+   p {
+    color: teal;
+  }
+  #songTitle {
+    color: brown;
+    opacity: 0.6;
+    line-height: 50%;
+
+  }
+}

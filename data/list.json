@@ -1,19 +1,28 @@
 
 {
   "songs": [ {
-    "title": "Love Is A Losing Game",
-    "artist": "Amy Winehouse",
-    "album": "Back to Black"
+     "title": "Love Is A Losing Game",
+     "artist": "Amy Winehouse",
+     "album": {
+       "name": "Back to Black",
+        "year": "2006"
+      }
     },
     {
       "title": "Legs",
       "artist": "ZZTop",
-      "album": "Eliminator"
+      "album": {
+        "name": "Eliminator",
+        "year": "1983"
+        }
       },
           {
       "title": "The Logical Song",
       "artist": "Supertramp",
-      "album": "Breakfast in America"
+      "album": {
+        "name": "Breakfast in America",
+        "year": "1979"
+        }
       }
     ]
 }

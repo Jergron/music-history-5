@@ -1,102 +1,83 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <meta charset="utf-8">
   <title>Nashville Software School</title>
 </head>
 
 <body>
-<div id="page">
-    <div class="top">
-  	  <header>
-  	  <div>
-      <nav>
-        <ul>
-          <li>
-            View Music
-          </li>
-          <li id="liline">|</li>
-          <li>
-            <a href="#">Add Music</a>
-          </li>
-          <li id="liline">|</li>
-          <li>
-            <a href="#">Profile</a>
-          </li>
-        </ul>
-      </nav>
-      </div>
-  	  </header>
+  <div class="container">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default" id="navbar">
+      <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">View Music</a></li>
+      <li><a href="#">View Artist</a></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
+    </nav>
+    <!-- Container for main and sidebar --> 
+    <div class=" container row">
+    <!-- Container for sidebar --> 
+      <div class="col-md-2 matchheight" id="sidebar">
+        <p for=fader id="slide" class="space">Song Length:</p>
+        <input type=range min=0 max=5 value=3 id="fader">
 
-  <div id="box">
-    <div class="sidebar">
-      <section>
-        <legend for=fader id="slide" class="space">Song Length:</legend>
-        <div id="drop">
-          <input type=range min=0 max=5 value=3 id="fader">
+        <div>
+          <p>Artist:</p>
+          <select class="form-control" id="artist">
+
+          </select>
         </div>
-      </section>
-      <div id="drop">
-	  <section>
-	    <label id="artist">
-	      <p>Artist:</p>
-	    </label>
-	    <select id="options">
-	      <option value="options">Options</option>
-	    </select>
-	    <label id="album">
-	      <p>Album:</p>
-	    </label>
-	    <select id="options">
-	      <option value="options">Options</option>
-	    </select>
-	  </section>
-      </div>
-      <legend id="drop">
+
+        <div>
+          <p>Album:</p>
+          <select class="form-control" id="album">
+
+          </select>
+        </div>
+     
         <p>Genre:</p>
-      </legend>
-      <div class="check">
-        <form action="demo_form.asp">
-          <legend>
-            <input type="checkbox" name="music" value="rock">Rock
-          </legend>
-          <legend>
-            <input type="checkbox" name="music" value="pop">Pop
-          </legend>
-          <legend>
-            <input type="checkbox" name="music" value="blues">Blues
-          </legend>
-        </form>
+        <!-- check box to select music -->
+        <div class="row">
+          <ul class="col-md-6">
+            <li><input type="checkbox" name="music" value="rock"> Rock</li>
+            <li><input type="checkbox" name="music" value="pop"> Pop</li>
+            <li><input type="checkbox" name="music" vvalue="blues"> Blues</li>
+          </ul>
+          <ul class="col-md-6">
+            <li><input type="checkbox" name="music" value="classical"> Classical</li>
+            <li><input type="checkbox" name="music" value="jazz"> Jazz</li>
+            <li><input type="checkbox" name="music" value="hip hop"> Hip Hop</li>
+          </ul>
+        </div>
+
+        <div  class="btn-group" role="group" aria-label="">
+          <button id="filterButton" type="button" class="btn btn-default">Filter</button>
+        </div>
+      
       </div>
-      <div class="list">
-        <form action="demo_form.asp">
-          <legend>
-            <input type="checkbox" name="music" value="classical">Classical
-          </legend>
-          <legend>
-            <input type="checkbox" name="music" value="jazz">Jazz
-          </legend>
-          <legend>
-            <input type="checkbox" name="music" value="hip hop">Hip Hop
-          </legend>
-        </form>
-      </div>
-      <div id="button">
-        <input type="submit" value="Filter">
+      <!-- container 'main' for song titles, artists, and album names -->
+      <div class="col-md-10 matchheight" id="main">
+        <button id="mainButton">More</button>
       </div>
     </div>
-    <div id="main">
-      <section>
-        <div id="main2" class="js-styling">
-
-          <button id="mainButton"><strong>More</strong></button>
-        </div>
-      </section>
-    </div>	
-  </div>  
-</div>
-  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  </div>
   <script data-main="javascripts/main" src="./bower_components/requirejs/require.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="bower_components/matchHeight/jquery.matchHeight.js"></script>
 </body>
+</html>

@@ -1,23 +1,35 @@
 {
   "songs": [ {
-    "title": "Another Brick in the Wall",
-    "artist": "Pink Floyd",
-    "album": "The Wall"
+     "title": "Another Brick in the Wall",
+     "artist": "Pink Floyd",
+     "album": {
+       "name": "The Wall",
+       "year": "1979" 
+      }
     },
     {
       "title": "Welcome To The Jungle",
       "artist": "Guns & Roses",
-      "album": "Appetite for Destruction"
+      "album": {
+        "name": "Appetite for Destruction",
+        "year": "1987"
+      }
     },
     {
       "title": "Ironic",
       "artist": "Alanis Morisette",
-      "album": "Jagged Little Pill"
+      "album": {
+        "name": "Jagged Little Pill",
+        "year": "1995"
+      }
     },
     {
       "title": "Ice Princess",
       "artist": "Azealia Banks",
-      "album": "Broke With Expensive Taste"
+      "album": {
+       "name": "Broke With Expensive Taste",
+       "year": "2014"
+      }
     }    
   ]
 }
