@@ -4,44 +4,42 @@ requirejs.config({
   paths: {
     'jquery': '../bower_components/jquery/dist/jquery.min',
     'hbs': '../bower_components/require-handlebars-plugin/hbs',
-    'bootstrap': '../bower_components/bootstrap/dist/js/bootstrap.min'
+    'bootstrap': '../bower_components/bootstrap/dist/js/bootstrap.min',
+    'firebase': '../bower_components/firebase/firebase',
+    'lodash': '../bower_components/lodash/lodash.min'
   },
   shim: {
-    'bootstrap': ['jquery']
+    'bootstrap': ['jquery'],
+    'firebase': {
+      exports: 'Firebase'
+    }
   }
 });
-/* requirejs is passing the named JS files as arguments 
-calling back their methods from inside another function into the main.js file. */ 
-requirejs(["jquery", "hbs", "bootstrap", "dom-access", "populate-songs", "get-more-songs"], 
-  function($, Handlebars, bootstrap, dom, populate, get) {
-  
-// Callingback information from it's file. 
-    populate.querySongs(function (songs){
-      music(songs);
-      fullList(songs);
-    });
 
-    $("#main").on("click",".delButton", function() {
-      $(this).closest("div").remove();
-    });
-    $("#main").on("click","#mainButton", function () {
-      get.querySongs(function (songs){
-        require(['hbs!../templates/songs'], 
-        function(songTemplate, artistTemplate, albumTemplate) {
-        $("#mainButton").before(songTemplate(songs));
-      });
-    });
+requirejs(["jquery", "lodash", "hbs", "bootstrap", "dom-access",  "addSong", "filterSong", "firebase"], 
+  function($, _, Handlebars, bootstrap, dom, addSong, filterSong, _firebase) {
+  
+  var myFirebaseRef = new Firebase("https://blazing-heat-6599.firebaseio.com/");
+  myFirebaseRef.on("value", function(snapshot) {
+    var songs = snapshot.val();
+    music(songs);
+console.log(songs);
+
+
+
   });
-  function fullList(songs){
-    get.querySongs(function (songs){
-      require(['hbs!../templates/artist', 'hbs!../templates/album'], 
-      function(artistTemplate, albumTemplate) {
-        $("#artist").append(artistTemplate(songs));
-        $("#album").append(albumTemplate(songs));
-      });
-    });
-  }
-  $(".matchheight").matchHeight();
+
+
+
+// var uniqueArtists = _.chain(allSongsArray)
+//                     .unique("artist")
+//                     .pluck("artist")
+//                     .val();
+// console.log(uniqueArtists);
+
+  $("#main").on("click",".delButton", function() {
+    $(this).closest("div").remove();
+  });
 });
 
 function music(songs){
@@ -49,8 +47,10 @@ function music(songs){
     function(songTemplate, artistTemplate, albumTemplate) {
       $("#artist").append(artistTemplate(songs));
       $("#album").append(albumTemplate(songs));
-      $("#mainButton").before(songTemplate(songs));
+      $("#main").append(songTemplate(songs));
   });
 }
+
+
 
 

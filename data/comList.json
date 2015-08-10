@@ -1,0 +1,59 @@
+{
+  "songs": [ {
+     "title": "Love Is A Losing Game",
+     "artist": "Amy Winehouse",
+     "album": {
+       "name": "Back to Black",
+        "year": "2006"
+      }
+    },
+    {
+      "title": "Legs",
+      "artist": "ZZTop",
+      "album": {
+        "name": "Eliminator",
+        "year": "1983"
+        }
+      },
+          {
+      "title": "The Logical Song",
+      "artist": "Supertramp",
+      "album": {
+        "name": "Breakfast in America",
+        "year": "1979"
+        }
+      },
+          {
+     "title": "Another Brick in the Wall",
+     "artist": "Pink Floyd",
+     "album": {
+       "name": "The Wall",
+       "year": "1979" 
+      }
+    },
+    {
+      "title": "Welcome To The Jungle",
+      "artist": "Guns & Roses",
+      "album": {
+        "name": "Appetite for Destruction",
+        "year": "1987"
+      }
+    },
+    {
+      "title": "Ironic",
+      "artist": "Alanis Morisette",
+      "album": {
+        "name": "Jagged Little Pill",
+        "year": "1995"
+      }
+    },
+    {
+      "title": "Ice Princess",
+      "artist": "Azealia Banks",
+      "album": {
+       "name": "Broke With Expensive Taste",
+       "year": "2014"
+      }
+    }    
+  ]
+}

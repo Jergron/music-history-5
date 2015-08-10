@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="styles/viewmusic.css"> -->
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <meta charset="utf-8">
+  <title>Nashville Software School</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-default" id="navbar">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h3>Music History</h3>
+    <form>
+      <div class="form-group">
+        <label for="artist name">Artist Name</label>
+        <input type="" class="form-control" id="artistName" placeholder="e.g. Taylor Swift">
+      </div>
+      <div class="form-group">
+        <label for="song title">Song Title</label>
+        <input type="" class="form-control" id="songTitle" placeholder="e.g. Bad Blood">
+      </div>
+      <div class="form-group">
+        <label for="album name">Album Name</label>
+        <input type="" class="form-control" id="albumName" placeholder="e.g. 1989">
+      </div>
+      <div class="form-group">
+        <label for="album year">Album Year</label>
+        <input type="" class="form-control" id="albumYear" placeholder="e.g. 2015">
+      </div>
+      <div class="form-group">
+        <label for="album genre">Album Genre</label>
+        <input type="" class="form-control" id="albumGenre" placeholder="e.g. pop">
+      </div>
+    </form>
+    <button class="btn btn-default" type="submit" id="addSong">Add Song</button>
+  </div>
+  <script data-main="javascripts/main" src="./bower_components/requirejs/require.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</html>
