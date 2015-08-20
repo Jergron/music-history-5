@@ -1,7 +1,7 @@
-  {{#each songs}}
-  <div class="songInfo" genre="{{album.genre}}" album="{{album.name}}" artist="{{artist}}">
-    <h3>{{title}} ({{album.year}})</h3>
-    <p>Performed by {{artist}} on the album {{album.name}}</p>
-    <button  class="btn btn-danger btn-xs delButton">Delete</button>
-  </div>
-  {{/each}}
+{{#each this}}
+<div class="songInfo" genre="{{album.genre}}" album="{{album.name}}" artist="{{artist}}">
+  <h3>{{title}} ({{album.year}})</h3>
+  <p>Performed by {{artist}} on the album {{album.name}}</p>
+  <span  class="glyphicon glyphicon-trash btn-sm delButton hidden"></span>
+</div>
+{{/each}}

@@ -1,4 +1,4 @@
-define(["jquery"], function($){
+define(["jquery", "asyncMod", "authentication"], function($, asyncMod, auth){
   $(document).ready(function() {
     $( "#addSong" ).click(function() {
       var list = {
@@ -8,15 +8,10 @@ define(["jquery"], function($){
           "year":$("#albumYear").val()
         }, 
         "artist": $("#artistName").val(), 
-        "title": $("#songTitle").val()
+        "title": $("#songTitle").val(),
+        "uid": auth.getUid()
       };
-    $.ajax({
-      url: "https://blazing-heat-6599.firebaseio.com/songs.json",
-      method: "POST",
-      data: JSON.stringify(list)
-    }).done(function(addSong){
-        location.reload();
-      });
+    asyncMod(list);
     });
   });
 });
