@@ -50,9 +50,8 @@ requirejs(["jquery", "lodash", "hbs", "bootstrap", "dom-access",  "addSong", "es
 
   $("#logOut").on("click", function() {
     ref.unauth();
-    console.log("#logOut", authData);
+    $(location).attr('href', 'http://localhost:8081/index.html');
   });
-
 });
 
 
