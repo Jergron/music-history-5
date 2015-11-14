@@ -1,4 +1,6 @@
-define(["jquery"], function($){
+import * as $ from "jquery";
+
+export default function(){
 
 //Create filter button
   $("#filterButton").on("click", function(){
@@ -27,4 +29,4 @@ define(["jquery"], function($){
       }
     });
   });
-});
+}

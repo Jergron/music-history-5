@@ -6,16 +6,18 @@ $background: rgba(0, 0, 0, 0.4);
 body {
   font: 100% $font-stack;
   color: $primary-color;
-  // background-image: url("http://self-inspiration.com/bundles/selfinspiration/article_pictures/71.jpg");
+  background-image: url("http://en.mallofsofia.bg/uploads/story/29/thumbs/back_background.jpg");
   min-height: 100%;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
   li {
+      color: white;
       list-style: none outside none;
   } 
 }
+
 #box {
   
 }
@@ -26,18 +28,29 @@ body {
 #sidebar {
 
    p{
-    color: teal;
+    color: white;
   }
 }
 
+.submitArtist {
+  background-color: none;
+  border: none;
+  
+}
+
 .songInfo {
-  background-color: white;
   border-radius: 5em;
   padding: 10px;
   margin-top: 10px;
   width: 40em;
   text-align: center;
-  border: 2px solid tomato;
+  letter-spacing: 3px;
+    h3 {
+      color: white;
+    }
+    small {
+      color: white;
+    }
 }
 
 
@@ -49,7 +62,9 @@ body {
 }
 
 #navbar {
-  background-color: tomato;
+  border: none;
+  border-bottom: 1px solid whitesmoke;
+  background-color: transparent;
   li a{
     color: white;
   }
@@ -59,10 +74,10 @@ body {
 #main {
   overflow: scroll;
    p {
-    color: teal;
+    color: burlywood;
   }
   #songTitle {
-    color: brown;
+    color: burlywood;
     opacity: 0.6;
     line-height: 50%;
 
@@ -70,7 +85,6 @@ body {
 }
 
 .glyphicon-trash {
-  display: none;
   color: crimson;
   background-color: transparent;
 }
