@@ -7,7 +7,10 @@ requirejs.config({
     'bootstrap': '../bower_components/bootstrap/dist/js/bootstrap.min',
     'firebase': '../bower_components/firebase/firebase',
     'lodash': '../bower_components/lodash/lodash.min',
-    'q': '../bower_components/q/q'
+    'q': '../bower_components/q/q',
+    'es6':'../bower_components/requirejs-babel/es6',
+    'babel':'../bower_components/requirejs-babel/babel-5.8.22.min'
+
   },
   shim: {
     'bootstrap': ['jquery'],
@@ -17,7 +20,7 @@ requirejs.config({
   }
 });
 
-requirejs(["jquery", "lodash", "hbs", "bootstrap", "dom-access",  "addSong", "filterSong", "firebase", "q", "get-songs", "get-more-songs", "searchArtist", "authentication"], 
+requirejs(["jquery", "lodash", "hbs", "bootstrap", "dom-access",  "addSong", "es6!filterSong", "firebase", "q", "get-songs", "get-more-songs", "searchArtist", "authentication"], 
   function($, _, Handlebars, bootstrap, dom, addSong, filterSong, _firebase, q, getSongs, getMoreSongs, search, auth) {
 
   var ref = new Firebase("https://blazing-heat-6599.firebaseio.com");
@@ -28,18 +31,28 @@ requirejs(["jquery", "lodash", "hbs", "bootstrap", "dom-access",  "addSong", "fi
     ref.authWithOAuthPopup("github", function(error, authData) {
       if (error) {
         console.log("Login Failed!", error);
-      } else {
+      } 
+      else {
         console.log("Authenticated successfully with payload:", authData);
         auth.setUid(authData.uid);
         require(["core_list"], function() {});
+        filterSong();
       }
     });
 
-  } else {
-        console.log("Authenticated successfully with payload:", authData);
-        auth.setUid(authData.uid);
-        require(["core_list"], function() {});
-      } 
+  } 
+  else {
+    console.log("Authenticated successfully with payload:", authData);
+    auth.setUid(authData.uid);
+    require(["core_list"], function() {});
+    filterSong();
+  } 
+
+  $("#logOut").on("click", function() {
+    ref.unauth();
+    console.log("#logOut", authData);
+  });
+
 });
 
 
