@@ -34,7 +34,7 @@ requirejs(["jquery", "lodash", "hbs", "bootstrap", "dom-access",  "addSong", "es
       } 
       else {
         console.log("Authenticated successfully with payload:", authData);
-        $(location).attr('href', 'http://localhost:8081/index.html');
+        $(location).attr('href', 'http://localhost:8081/main.html');
       }
     });
   });
@@ -47,7 +47,7 @@ requirejs(["jquery", "lodash", "hbs", "bootstrap", "dom-access",  "addSong", "es
       } 
       else {
         console.log("Authenticated successfully with payload:", authData);
-        $(location).attr('href', 'http://localhost:8081/index.html');
+        $(location).attr('href', 'http://localhost:8081/main.html');
       }
     });
   });
@@ -58,7 +58,7 @@ requirejs(["jquery", "lodash", "hbs", "bootstrap", "dom-access",  "addSong", "es
 
   $("#logOut").on("click", function() {
     ref.unauth();
-    $(location).attr('href', 'http://localhost:8081/login.html');
+    $(location).attr('href', 'http://localhost:8081/index.html');
   });
 });
 
