@@ -22,35 +22,30 @@ requirejs.config({
 
 requirejs(["jquery", "lodash", "hbs", "bootstrap", "dom-access",  "addSong", "es6!filterSong", "firebase", "q", "get-songs", "get-more-songs", "searchArtist", "authentication"], 
   function($, _, Handlebars, bootstrap, dom, addSong, filterSong, _firebase, q, getSongs, getMoreSongs, search, auth) {
-
   var ref = new Firebase("https://blazing-heat-6599.firebaseio.com");
   var authData = ref.getAuth();
   console.log("authData", authData);
 
-  if(authData === null) {
+  $("#login").on("click", function() {
+    console.log("authData", authData);
     ref.authWithOAuthPopup("github", function(error, authData) {
       if (error) {
         console.log("Login Failed!", error);
       } 
       else {
         console.log("Authenticated successfully with payload:", authData);
-        auth.setUid(authData.uid);
-        require(["core_list"], function() {});
-        filterSong();
+        $(location).attr('href', 'http://localhost:8081/index.html');
       }
     });
-
-  } 
-  else {
-    console.log("Authenticated successfully with payload:", authData);
-    auth.setUid(authData.uid);
-    require(["core_list"], function() {});
-    filterSong();
-  } 
+  });
+  
+  auth.setUid(authData.uid);
+  require(["core_list"], function() {});
+  filterSong();
 
   $("#logOut").on("click", function() {
     ref.unauth();
-    $(location).attr('href', 'http://localhost:8081/index.html');
+    $(location).attr('href', 'http://localhost:8081/login.html');
   });
 });
 

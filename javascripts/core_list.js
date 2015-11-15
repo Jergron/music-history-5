@@ -19,10 +19,6 @@ define(function(require) {
         console.log("click");
       });
 
-      
-
-      
-
       var first_list_of_songs = getSongs();  
       var all_songs = [];
 
