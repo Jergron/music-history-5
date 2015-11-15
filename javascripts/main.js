@@ -39,6 +39,19 @@ requirejs(["jquery", "lodash", "hbs", "bootstrap", "dom-access",  "addSong", "es
     });
   });
   
+  $("#loginFB").on("click", function() {
+    console.log("authData", authData);
+    ref.authWithOAuthPopup("facebook", function(error, authData) {
+      if (error) {
+        console.log("Login Failed!", error);
+      } 
+      else {
+        console.log("Authenticated successfully with payload:", authData);
+        $(location).attr('href', 'http://localhost:8081/index.html');
+      }
+    });
+  });
+
   auth.setUid(authData.uid);
   require(["core_list"], function() {});
   filterSong();

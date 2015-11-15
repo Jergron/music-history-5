@@ -11,7 +11,7 @@ define(["jquery", "asyncMod", "authentication"], function($, asyncMod, auth){
         "title": $("#songTitle").val(),
         "uid": auth.getUid()
       };
-    asyncMod(list);
+      asyncMod(list);
     });
   });
 });
